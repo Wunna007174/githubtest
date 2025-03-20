@@ -83,6 +83,42 @@
             margin-top: 2rem;
             font-style: oblique;
         }
+        @media screen and (max-width: 768px) {
+    .button {
+        height: 10vh;
+        width: 50vw;
+    }
+    button {
+        font-size: clamp(0.8rem, 4vw, 1.5rem);
+        width: 48vw;
+        height: 9vh;
+        border-radius: 15px;
+    }
+    button:hover {
+        font-size: clamp(1rem, 5vw, 2rem);
+    }
+    p {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .falling-text {
+        font-size: 2rem;
+        animation-duration: 5s;
+    }
+}
+
+/* Keyframes for Mobile (Smooth Falling Effect) */
+@keyframes fall {
+    from {
+        transform: translateY(-10vh) rotateX(0deg) rotateY(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(105vh) rotateX(180deg) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
     </style>
 </head>
 <body>
